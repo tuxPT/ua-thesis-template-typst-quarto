@@ -1,0 +1,16 @@
+# typst-gather configuration
+# Run: quarto call typst-gather
+
+rootdir = "_extensions/ua-thesis"
+destination = "typst/packages"
+
+discover = ["template.typ", "typst-template.typ", "typst-show.typ", "acronyms"]
+
+# Preview packages are auto-discovered from imports.
+# Uncomment to pin specific versions:
+# [preview]
+# cetz = "0.4.1"
+
+# Local packages (@local namespace) must be configured manually.
+# [local]
+# my-pkg = "/path/to/my-pkg"

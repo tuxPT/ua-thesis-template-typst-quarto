@@ -31,7 +31,8 @@
   str_list_of_figures: "Lista de Figuras",
   str_acronyms: "Acrónimos",
   str_chapter: "Capítulo  ",
-  body
+  bibliography: none,
+  body,
 ) = {
   // 1. Document Metadata & Typography Setup
   set document(title: title-pt, author: author)
@@ -430,5 +431,31 @@
 
     // Render the actual thesis content
     #body
+
+    // 3. Bibliography
+    #show heading.where(level: 1): it => {
+        pagebreak(to: "even", weak: true)
+        v(15%)
+
+        pad(right: -30mm,
+          align(right)[
+            #block(width: auto)[
+              #set align(left)
+              #grid(
+                columns: (auto, auto, auto),
+                align: bottom,
+                column-gutter: 12pt,
+                text(size: 18pt, tracking: 1.5pt)[],
+                text(size: 60pt)[],
+                rect(width: 10pt, height: 45pt, fill: black)
+              )
+            ]
+          ]
+        )
+        v(0.5em)
+        align(right, text(size: 26pt, weight: "bold")[Bibliografia])
+      }
+        
+    #bibliography
   ]
 }
