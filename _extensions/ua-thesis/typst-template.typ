@@ -1,6 +1,8 @@
 // ua-thesis-template.typ
 
-#import "acronyms.typ"
+// Check: https://typst.app/universe/package/acrostiche/
+
+#import "@preview/acrostiche:0.7.0": *
 
 #let ua-thesis(
   title-pt: none,
@@ -30,12 +32,18 @@
   str_index: "Índice",
   str_list_of_figures: "Lista de Figuras",
   str_acronyms: "Acrónimos",
+  str_list_of_tables: "Lista de Tabelas",
   str_chapter: "Capítulo  ",
   bibliography: none,
+  acronyms: (),
   body,
 ) = {
   // 1. Document Metadata & Typography Setup
   set document(title: title-pt, author: author)
+  [
+    #init-acronyms(acronyms)
+  ]
+
   
   set text(font: ("Helvetica", "Arial", "sans-serif"), size: 11pt, lang: "pt")
   
@@ -332,7 +340,7 @@
       stroke: if debug { black },
       grid.cell(x: 0, y: 2, text(size: 11pt, weight: "bold",str_list_of_figures)),
       grid.cell(x: 1, y: 2, text(size: 10pt, [
-        #outline(title: none, depth: 3, indent: auto, target: figure.where(kind: image))
+        #outline(title: none, depth: 3, indent: auto, target: figure.where(kind: "quarto-float-fig"))
         ])
       ),
     )
@@ -349,11 +357,28 @@
       stroke: if debug { black },
       grid.cell(x: 0, y: 2, text(size: 11pt, weight: "bold",str_acronyms)),
       grid.cell(x: 1, y: 2, text(size: 10pt, [
-        //#print-index()
+        #print-index(title:"")
         ])
       ),
     )
   ]
+
+  // ----------------------------------------------------------------------
+  // 11. List of Tables
+  // ----------------------------------------------------------------------
+  [
+  #set page(margin: (top: 8mm, left: 15mm, right: 15mm, bottom: 10mm))
+    #grid(
+      columns: (56.4mm, 124.3mm),
+      rows: (74.638mm, auto),
+      stroke: if debug { black },
+      grid.cell(x: 0, y: 2, text(size: 11pt, weight: "bold",str_list_of_tables)),
+      grid.cell(x: 1, y: 2, text(size: 10pt, [
+        #outline(title: none, depth: 3, indent: auto, target: figure.where(kind: "quarto-float-tbl"))
+        ])
+      ),
+    )
+  ]  
 
   // ----------------------------------------------------------------------
   // 13. Main Document Body Configuration

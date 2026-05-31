@@ -26,7 +26,7 @@ Citar as suas fontes corretamente é crucial. Este template usa um ficheiro de b
 
 As figuras são essenciais para visualizar dados e conceitos. Pode incluir imagens usando o comando `image()` e o `figure()`. A @fig-ualogo mostra um exemplo. Lembre-se de usar imagens de alta qualidade e fornecer uma legenda descritiva.
 
-![ua-logo](_extensions/ua-thesis/figs/ua-logo.png){ #fig-ualogo fig-align="default" width=30% fig-alt="Um exemplo de uma figura " }
+![Um exemplo de uma figura](_extensions/ua-thesis/figs/ua-logo.png){#fig-ualogo fig-align="default" width=30% }
 
 ### Criação de Tabelas
 

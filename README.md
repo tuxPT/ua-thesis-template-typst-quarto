@@ -4,7 +4,7 @@ A thesis template (Typst based) extension for quarto that complies with the Univ
 guidelines. 
 
 > [!WARNING]  
-> Alpha version, some non-content pages broken, like LOT, LOF, and acronyms.
+> Alpha version, acronyms print but do not process (TODO)
 
 > [!WARNING]
 > Do not open issues for typst template, contribute to the [original template](https://github.com/detiuaveiro/ua-thesis-template-typst) instead. Only issues related to the extension are welcome.

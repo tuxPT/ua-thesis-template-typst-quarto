@@ -19,7 +19,7 @@
   year: "$year$",
   degree: "$degree$",
   department: "$department$",
-  theme-color: rgb("#A23223"), 
+  theme-color: rgb("#$theme-color$"), 
   supervisors: (${ for(supervisors) }"${ supervisors }"${ sep }, ${ endfor }),
   jury: (${ for(jury) }(role: "${ jury.role }", name: "${ jury.name }", title: "${ jury.title }")${ sep }, ${ endfor }),
   grant-text-a: [$grant-text-a$],
@@ -35,12 +35,36 @@
   language: "$lang$",
   debug: false,
   str_the_jury: "$str-the-jury$",
+$if(str-acknowledgements)$
   str_acknowledgements: "$str-acknowledgements$",
+$endif$
+
+$if(str-ai-usage)$
   str_ai_usage: "$str-ai-usage$",
+$endif$
+
+$if(str-index)$
   str_index: "$str-index$",
+$endif$
+
+$if(str-list-of-figures)$
   str_list_of_figures: "$str-list-of-figures$",
+$endif$
+
+$if(str-acronyms)$
   str_acronyms: "$str-acronyms$",
+$endif$
+
+$if(str-list-of-tables)$
+  str_list_of_tables: "$str-list-of-tables$",
+$endif$
+
+$if(str-chapter)$
   str_chapter: "$str-chapter$",
+$endif$
+
   bibliography: bibliography("$bibliography$"),
+
+  acronyms: (${ for(acronyms) }"${ acronyms.short }": ("${ acronyms.long }", "${ acronyms.long-pl }") ${ sep }, ${ endfor } ),
 )
 
