@@ -20,6 +20,13 @@ Pode criar secções usando o comando `###` e subsecções com `###`. Para um an
 
 Citar as suas fontes corretamente é crucial. Este template usa um ficheiro de bibliografia em formato *Bibtex* para a gestão da bibliografia. Pode adicionar citações de várias maneiras. Por exemplo, pode citar uma fonte usando `@chave`, como as normas da Universidade de Aveiro @modelos.
 
+## Acronyms
+
+- Singular: `{{{< acr UA >}}}` {{< acr UA >}}
+- Plural: `{{{< acr UA plural=true >}}}` {{< acr UA plural=true >}}.
+
+
+
 ## Figuras e Tabelas
 
 ### Inclusão de Figuras

@@ -9,6 +9,8 @@ contributes:
       template-partials:
         - typst-template.typ
         - typst-show.typ
+      shortcodes:
+        - acr-shortcode.lua
       # disable quarto refs div injection
       cite-method: natbib
 

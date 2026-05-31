@@ -84,8 +84,11 @@ acronyms:
     long: Universidade de Aveiro
     long-pl: Universidade de Aveiro
 
+
+
 format: 
-  ua-thesis-typst: default
+  ua-thesis-typst:
+    keep-typ: true
 ---
 
 {{< include chapters/chapter1.qmd >}}
