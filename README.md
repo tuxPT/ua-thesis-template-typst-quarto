@@ -13,16 +13,25 @@ guidelines.
 
 Install Quarto according to https://quarto.org/docs/get-started/
 
-Edit the `index.qmd` as adequate.
-
-Compile the thesis with:
+### Method 1: Add extension (does not install template.qmd)
 ```
-quarto render index.qmd --to ua-thesis-typst
+quarto install extension tuxPT/ua-thesis-template-typst-quarto
 ```
 
-You can live compile it with:
+### Method 2: Add Template
 ```
-quarto preview index.qmd --to ua-thesis-typst
+quarto use template tuxPT/ua-thesis-template-typst-quarto
+```
+
+
+### Compile with:
+```
+quarto render template.qmd --to ua-thesis-typst
+```
+
+### Live Preview with:
+```
+quarto preview template.qmd --to ua-thesis-typst
 ```
 
 
