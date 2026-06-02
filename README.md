@@ -15,12 +15,12 @@ Install Quarto according to https://quarto.org/docs/get-started/
 
 ### Method 1: Add extension (does not install template.qmd)
 ```
-quarto install extension tuxPT/ua-thesis-template-typst-quarto
+quarto install extension tuxPT/ua-thesis-template-typst-quarto@master
 ```
 
 ### Method 2: Add Template
 ```
-quarto use template tuxPT/ua-thesis-template-typst-quarto
+quarto use template tuxPT/ua-thesis-template-typst-quarto@master
 ```
 
 
