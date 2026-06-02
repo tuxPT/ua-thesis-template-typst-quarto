@@ -13,16 +13,21 @@ guidelines.
 
 Install Quarto according to https://quarto.org/docs/get-started/
 
-Edit the `index.qmd` as adequate.
+Install the extension:
+```
+quarto add tuxPT/ua-thesis
+```
+
+Copy the `example.qmd` and modify.
 
 Compile the thesis with:
 ```
-quarto render index.qmd --to ua-thesis-typst
+quarto render example.qmd --to ua-thesis-typst
 ```
 
 You can live compile it with:
 ```
-quarto preview index.qmd --to ua-thesis-typst
+quarto preview example.qmd --to ua-thesis-typst
 ```
 
 
